@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [2, {"extensions": [".js", ".jsx"]}],
+    "semi": [2, "never"],
+  },
+  "settings": {
+    "import/core-modules": [
+      "components",
+      "store",
+      "store/actions",
+    ],
+  }
+}
