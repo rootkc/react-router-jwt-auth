@@ -1,6 +1,6 @@
 import React from 'react'
-import { List, Link, HorizontalRule, Heading } from 'components'
 import { Route } from 'react-router-dom'
+import { List, Link, HorizontalRule, Heading } from 'components'
 import { SignupUserForm, LoginUserForm, UserList } from 'containers'
 
 const App = () => (
