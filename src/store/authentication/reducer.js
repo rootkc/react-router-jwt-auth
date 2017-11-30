@@ -10,7 +10,6 @@ const authenticationReducer = (state = initState, action) => {
     case FETCH_USERS_FULFILLED:
       return {
         ...state,
-        // `login` is the username
         users: action.payload.data,
       }
 
