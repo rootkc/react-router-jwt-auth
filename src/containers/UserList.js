@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { UserList } from 'components'
-import { fetchUser } from 'store/actions'
+import { fetchUsers } from 'store/actions'
 
 class UserListContainer extends Component {
   componentWillMount() {
@@ -19,11 +19,11 @@ UserListContainer.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  userList: state.authentication.users,
+  userList: state.users,
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: () => dispatch(fetchUser()),
+  fetchUser: () => dispatch(fetchUsers()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserListContainer)

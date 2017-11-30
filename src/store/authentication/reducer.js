@@ -1,16 +1,20 @@
-export const FETCH_USERS = 'FETCH_USERS'
-export const FETCH_USERS_FULFILLED = 'FETCH_USERS_FULFILLED'
+export const CREATE_USER = 'CREATE_USER'
+export const CREATE_USER_FULFILLED = 'CREATE_USER_FULFILLED'
+export const LOGIN_USER = 'LOGIN_USER'
+export const LOGIN_USER_FULFILLED = 'LOGIN_USER_FULFILLED'
 
-const initState = {
-  users: [],
-}
-
-const authenticationReducer = (state = initState, action) => {
+const authenticationReducer = (state = {}, action) => {
   switch (action.type) {
-    case FETCH_USERS_FULFILLED:
+    case CREATE_USER_FULFILLED:
       return {
         ...state,
-        users: action.payload.data,
+        user: action.payload,
+      }
+
+    case LOGIN_USER_FULFILLED:
+      return {
+        ...state,
+        token: action.payload,
       }
 
     default:

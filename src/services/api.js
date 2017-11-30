@@ -1,12 +1,12 @@
 import { Observable } from 'rxjs'
 
-const token = 'fe' // window.storage.getItem('token')
+const token = localStorage.getItem('token')
 
-const api = (url, type = 'GET', body = {}) => (
+const api = (url, method = 'GET', body = {}) => (
   Observable.ajax({
     url,
     body,
-    type,
+    method,
     crossDomain: true,
     responseType: 'json',
     headers: {
