@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
-import Label from '../Label/'
+import { Label } from 'components'
 
 const FieldContainer = ({ name, label, type }) => (
   <div>
