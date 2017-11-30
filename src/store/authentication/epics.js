@@ -1,9 +1,9 @@
 import { Observable } from 'rxjs'
-import { FETCH_USER } from './reducer'
+import { FETCH_USERS } from './reducer'
 import { fetchUserFulfilled } from './actions'
 
 const authenticationEpic = action$ =>
-  action$.ofType(FETCH_USER)
+  action$.ofType(FETCH_USERS)
     .mergeMap(() =>
       Observable.ajax.getJSON('/users')
         .map(response => fetchUserFulfilled(response)))

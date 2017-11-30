@@ -1,4 +1,4 @@
-import { FETCH_USER, FETCH_USER_FULFILLED } from './reducer'
+import { FETCH_USERS, FETCH_USERS_FULFILLED } from './reducer'
 
-export const fetchUser = username => ({ type: FETCH_USER, payload: username })
-export const fetchUserFulfilled = payload => ({ type: FETCH_USER_FULFILLED, payload })
+export const fetchUser = username => ({ type: FETCH_USERS, payload: username })
+export const fetchUserFulfilled = payload => ({ type: FETCH_USERS_FULFILLED, payload })

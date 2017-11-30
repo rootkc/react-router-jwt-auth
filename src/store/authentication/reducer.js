@@ -1,13 +1,17 @@
-export const FETCH_USER = 'FETCH_USER'
-export const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED'
+export const FETCH_USERS = 'FETCH_USERS'
+export const FETCH_USERS_FULFILLED = 'FETCH_USERS_FULFILLED'
 
-const authenticationReducer = (state = {}, action) => {
+const initState = {
+  users: [],
+}
+
+const authenticationReducer = (state = initState, action) => {
   switch (action.type) {
-    case FETCH_USER_FULFILLED:
+    case FETCH_USERS_FULFILLED:
       return {
         ...state,
         // `login` is the username
-        [action.payload.login]: action.payload,
+        users: action.payload.data,
       }
 
     default:

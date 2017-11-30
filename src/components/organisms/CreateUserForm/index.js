@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Form, Field, Button } from 'components'
+import { Form, Field, Button, Heading } from 'components'
 
 const CreateUserForm = ({ handleSubmit }) => (
-  <Form onSubmit={handleSubmit}>
-    <Field name="username" label="username" />
-    <Field name="password" label="password" type="password" />
-    <Button label="create user" />
-  </Form>
+  <div>
+    <Heading>Create User</Heading>
+    <Form onSubmit={handleSubmit}>
+      <Field name="username" label="username" />
+      <Field name="password" label="password" type="password" />
+      <Button label="create user" />
+    </Form>
+  </div>
+
 )
 
 CreateUserForm.propTypes = {

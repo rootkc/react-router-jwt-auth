@@ -1,19 +1,20 @@
 import React from 'react'
 import { List, Link, HorizontalRule } from 'components'
 import { Route } from 'react-router-dom'
-import { CreateUserForm } from 'containers'
+import { CreateUserForm, UserList } from 'containers'
 
 const App = () => (
   <div>
     <List>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/topics">Topics</Link>
+      <Link key="route1" to="/">Home</Link>
+      <Link key="route2" to="/users">Users</Link>
+      <Link key="route3" to="/signup">Signup</Link>
     </List>
     <HorizontalRule />
-    <Route exact path="/" component={CreateUserForm} />
-    <Route path="/about" component={CreateUserForm} />
-    <Route path="/topics" component={CreateUserForm} />
+    <Route exact path="/" render={() => <h3>Welcome!</h3>} />
+    <Route exact path="/users" component={UserList} />
+    <Route path="/users/:id" component={CreateUserForm} />
+    <Route path="/signup" component={CreateUserForm} />
   </div>
 )
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const List = ({ children }) => (
   <ul>
     {children.map(child => (
-      <li>
+      <li key={child.key}>
         { child }
       </li>
     ))}
@@ -13,7 +13,7 @@ const List = ({ children }) => (
 )
 
 List.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 }
 
 export default List
