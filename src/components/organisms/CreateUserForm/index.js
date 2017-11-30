@@ -6,7 +6,7 @@ const CreateUserForm = ({ handleSubmit }) => (
   <Form onSubmit={handleSubmit}>
     <Field name="username" label="username" />
     <Field name="password" label="password" type="password" />
-    <Button> {'Create user'} </Button>
+    <Button label="create user" />
   </Form>
 )
 

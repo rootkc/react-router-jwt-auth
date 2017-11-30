@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ children }) => (
+const Button = ({ label }) => (
   <button type="submit">
-    { children }
+    { label }
   </button>
 )
 
 Button.propTypes = {
-  children: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
 }
 
 export default Button
