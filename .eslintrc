@@ -18,6 +18,7 @@
       "components",
       "containers",
       "store",
+      "services",
       "store/actions",
     ],
   }
