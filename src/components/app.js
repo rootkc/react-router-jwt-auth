@@ -3,11 +3,16 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { fetchUser } from 'store/actions'
 
-const App = ({ fetchUserProps }) => (
-  <div> {'Hi Auth!'}
-    <button onClick={() => fetchUserProps('redux-observable')} />
-  </div>
+import { Field, Button } from 'components'
+import { CreateUser } from 'containers'
 
+
+const App = ({ fetchUserProps }) => (
+  <CreateUser onSubmit={fetchUserProps}>
+    <Field name="username" label="username" />
+    <Field name="password" label="password" type="password" />
+    <Button> {'Create user'} </Button>
+  </CreateUser>
 )
 
 App.propTypes = {
