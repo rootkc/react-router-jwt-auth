@@ -8,7 +8,7 @@ const UserList = ({ userList }) => (
     <List>
       {
         userList.map(user => (
-          <Link key={user.id} to={`/users/${user.id}`}> { user.username } </Link>
+          <Link key={user.id} to={`/user/${user.id}`}> { user.username } </Link>
         ))
       }
     </List>
