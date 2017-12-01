@@ -6,7 +6,7 @@ const loginUserReducer = (state = {}, action) => {
     case LOGIN_USER_FULFILLED:
       return {
         ...state,
-        token: action.payload,
+        ...action.payload,
       }
 
     default:

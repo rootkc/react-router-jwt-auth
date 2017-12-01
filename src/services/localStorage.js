@@ -1,18 +1,18 @@
 const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('token')
+    const serializedState = localStorage.getItem('login')
     if (serializedState === null) return undefined
     return {
-      login: { token: serializedState },
+      login: JSON.parse(serializedState),
     }
   } catch (err) {
     return undefined
   }
 }
 
-const saveState = (token) => {
+const saveState = (token, id) => {
   try {
-    localStorage.setItem('token', token)
+    localStorage.setItem('login', JSON.stringify({ token, id }))
   } catch (err) {
     // ignore
   }
