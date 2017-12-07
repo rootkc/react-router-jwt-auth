@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { List, Link, Heading } from 'components'
 
-const UserList = ({ userList }) => (
+const UserList = ({ users }) => (
   <div>
     <Heading>Users</Heading>
     <List>
       {
-        userList.map(user => (
+        users.map(user => (
           <Link key={user.id} to={`/user/${user.id}`}> { user.username } </Link>
         ))
       }
@@ -17,7 +17,7 @@ const UserList = ({ userList }) => (
 )
 
 UserList.propTypes = {
-  userList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  users: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default UserList

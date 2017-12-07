@@ -8,7 +8,7 @@ const SignUpUserFormContainer = props => <UserForm title="Signup" label="signup"
 const onSubmit = (data, dispatch) => dispatch(createUser(data))
 
 export default reduxForm({
-  form: 'SignupUserForm',
+  form: 'SignupForm',
   destroyOnUnmount: false,
   onSubmit,
 })(SignUpUserFormContainer)

@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { UserList } from 'components'
+import { Users } from 'components'
 import { fetchUsers } from 'store/actions'
 
 class UserListContainer extends Component {
   componentWillMount() {
-    this.props.fetchUser()
+    this.props.fetchUsers()
   }
 
   render() {
-    return <UserList {...this.props} />
+    return <Users {...this.props} />
   }
 }
 
 UserListContainer.propTypes = {
-  fetchUser: PropTypes.func.isRequired,
+  fetchUsers: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
-  userList: state.users,
+  users: state.users,
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: () => dispatch(fetchUsers()),
+  fetchUsers: () => dispatch(fetchUsers()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserListContainer)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { List, Link, HorizontalRule, Heading } from 'components'
-import { SignupUserForm, LoginUserForm, UserList, User } from 'containers'
+import { SignupUserForm, LoginUserForm, EditUserForm, Users, User } from 'containers'
 
 const App = () => (
   <div>
@@ -13,8 +13,9 @@ const App = () => (
     </List>
     <HorizontalRule />
     <Route exact path="/" render={() => <Heading>Welcome!</Heading>} />
-    <Route exact path="/users" component={UserList} />
+    <Route exact path="/users" component={Users} />
     <Route path="/user/:id" component={User} />
+    <Route path="/edit/:id" component={EditUserForm} />
     <Route path="/login" component={LoginUserForm} />
     <Route path="/signup" component={SignupUserForm} />
   </div>
