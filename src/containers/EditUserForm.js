@@ -10,6 +10,7 @@ const onSubmit = (data, dispatch) => dispatch(editUser(data))
 
 const mapStateToProps = state => ({
   initialValues: { username: state.user.username },
+  message: state.editUser.message,
 })
 
 const formEditUserFormContainer = reduxForm({

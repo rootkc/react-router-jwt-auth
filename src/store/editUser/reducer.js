@@ -7,6 +7,7 @@ const edituserReducer = (state = {}, action) => {
       return {
         ...state,
         user: action.payload,
+        message: `user ${action.payload.username} successfully edited`,
       }
 
     default:

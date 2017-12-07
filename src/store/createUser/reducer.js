@@ -6,7 +6,7 @@ const createUserReducer = (state = {}, action) => {
     case CREATE_USER_FULFILLED:
       return {
         ...state,
-        user: action.payload,
+        message: `user ${action.payload.username} successfully created`,
       }
 
     default:
