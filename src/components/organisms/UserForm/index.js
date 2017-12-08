@@ -4,6 +4,7 @@ import { Form, Field, Button, Heading } from 'components'
 
 const CreateUserForm = ({
   handleSubmit,
+  submitting,
   title,
   label,
   message,
@@ -14,7 +15,7 @@ const CreateUserForm = ({
     <Form onSubmit={handleSubmit}>
       <Field name="username" label="username" />
       <Field name="password" label="password" type="password" />
-      <Button label={label} />
+      <Button disabled={submitting} label={label} />
     </Form>
     <p>{ message && message }</p>
     <p>{ error && error }</p>
@@ -23,6 +24,7 @@ const CreateUserForm = ({
 
 CreateUserForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  submitting: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,
