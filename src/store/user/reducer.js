@@ -1,7 +1,7 @@
 export const FETCH_USER = 'FETCH_USER'
 export const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED'
 
-const initState = []
+const initState = {}
 
 const fetchUserReducer = (state = initState, action) => {
   switch (action.type) {

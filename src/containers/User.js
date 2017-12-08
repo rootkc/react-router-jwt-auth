@@ -16,6 +16,12 @@ class UserListContainer extends Component {
 }
 
 UserListContainer.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    params: PropTypes.object,
+    path: PropTypes.string,
+    url: PropTypes.string,
+  }).isRequired,
   fetchUser: PropTypes.func.isRequired,
 }
 

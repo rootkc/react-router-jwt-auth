@@ -11,7 +11,10 @@ const User = ({ user, id }) => (
 
 User.propTypes = {
   id: PropTypes.string.isRequired,
-  user: PropTypes.object.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    username: PropTypes.string,
+  }).isRequired,
 }
 
 export default User
