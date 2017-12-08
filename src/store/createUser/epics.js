@@ -1,5 +1,4 @@
 import { api } from 'services'
-import { push } from 'react-router-redux'
 import { CREATE_USER } from './reducer'
 import { createUserFufilled } from './actions'
 
