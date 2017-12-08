@@ -8,7 +8,7 @@ const CreateUserForm = ({
   title,
   label,
   message,
-  error,
+  errorMessage,
 }) => (
   <div>
     <Heading> { title } </Heading>
@@ -17,8 +17,8 @@ const CreateUserForm = ({
       <Field name="password" label="password" type="password" />
       <Button disabled={submitting} label={label} />
     </Form>
-    <p>{ message && message }</p>
-    <p>{ error && error }</p>
+    { errorMessage && <p>{ errorMessage }</p> }
+    { message && <p>{ message }</p> }
   </div>
 )
 
@@ -28,12 +28,12 @@ CreateUserForm.propTypes = {
   title: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   message: PropTypes.string,
-  error: PropTypes.string,
+  errorMessage: PropTypes.string,
 }
 
 CreateUserForm.defaultProps = {
   message: null,
-  error: null,
+  errorMessage: null,
 }
 
 export default CreateUserForm

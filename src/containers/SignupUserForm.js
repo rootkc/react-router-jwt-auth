@@ -10,6 +10,7 @@ const onSubmit = (data, dispatch) => dispatch(createUser(data))
 
 const mapStateToProps = state => ({
   message: state.createUser.message,
+  errorMessage: state.createUser.error,
 })
 
 const formSignUpFormContainer = reduxForm({
